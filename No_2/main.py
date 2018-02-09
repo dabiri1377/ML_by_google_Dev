@@ -32,9 +32,6 @@ print(clf.predict(test_data))
 
 # viz code
 # viz code not work very well, i don't care
-
-
-
 dot_data = StringIO()
 tree.export_graphviz(clf,
                      out_file=dot_data,
