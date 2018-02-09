@@ -1,4 +1,4 @@
-from tkinter import Image
+
 
 from sklearn.datasets import load_iris
 import numpy as np
@@ -33,6 +33,7 @@ print(clf.predict(test_data))
 # viz code
 from sklearn.externals.six import StringIO
 import pydot
+import pydotplus
 
 dot_data = StringIO()
 tree.export_graphviz(clf,
@@ -42,4 +43,4 @@ tree.export_graphviz(clf,
                      impurity=False)
 
 graph = pydot.graph_from_dot_data(dot_data.getvalue())
-tree.export_graphviz(clf,out_file='tree.dot')
+graph.write_pdf("iris.pdf")
