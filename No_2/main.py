@@ -1,5 +1,5 @@
-
-
+from sklearn.externals.six import StringIO
+import pydot
 from sklearn.datasets import load_iris
 import numpy as np
 from sklearn import tree
@@ -31,9 +31,9 @@ print("test target = %s" % test_target)
 print(clf.predict(test_data))
 
 # viz code
-from sklearn.externals.six import StringIO
-import pydot
-import pydotplus
+# viz code not work very well, i don't care
+
+
 
 dot_data = StringIO()
 tree.export_graphviz(clf,
@@ -43,4 +43,4 @@ tree.export_graphviz(clf,
                      impurity=False)
 
 graph = pydot.graph_from_dot_data(dot_data.getvalue())
-graph.write_pdf("iris.pdf")
+tree.export_graphviz(clf, out_file='tree.dot')
