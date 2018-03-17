@@ -2,6 +2,7 @@
   <dictionary name="moh">
     <words>
       <w>dataset</w>
+      <w>tensorflow</w>
     </words>
   </dictionary>
 </component>
