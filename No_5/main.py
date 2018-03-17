@@ -29,7 +29,7 @@ def most_common(L):
     return max(groups, key=_auxfun)[0]
 
 
-class ScrappyKNN():
+class ScrappyKNN:
     def fit(self, x_train_data, y_train_data):
         self.x_train = x_train_data
         self.y_train = y_train_data
